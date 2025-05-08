@@ -1,0 +1,38 @@
+🔹 Theory for C1 (Write This in Exam)
+Web Scraping:
+Web scraping is a technique used to automatically extract data from websites using a script.
+
+In this practical, a review scraper is built using Python to collect real-time data like:
+
+Customer name
+
+Comments / Reviews
+
+Ratings
+
+Comment tags (e.g., "Verified Purchase", "Helpful")
+
+This data helps in sentiment analysis and understanding customer feedback.
+
+🐍 Python Libraries Used (Simple Explanation)
+requests
+
+Sends HTTP requests to fetch web page HTML.
+
+Example: requests.get(URL)
+
+BeautifulSoup (from bs4)
+
+Parses HTML content and helps extract specific data (like tags, classes).
+
+Example: soup.find_all('div', class_='review')
+
+pandas (optional)
+
+Stores scraped data in table form (DataFrame) for saving or analysis.
+
+Example: pd.DataFrame(data)
+
+time (optional)
+
+Used to pause requests (avoid getting blocked by websites).

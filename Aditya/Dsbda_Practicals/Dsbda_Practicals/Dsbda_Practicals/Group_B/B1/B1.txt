@@ -1,0 +1,38 @@
+🔹 Theory for B1 (Write This in Exam)
+a. Create Data Subsets:
+Subsetting means selecting specific rows or columns from a dataset to focus on required information. It helps in analyzing only the relevant part of the data.
+
+b. Merge Data:
+Merging combines two or more datasets based on common columns (like ID). This is useful when data is split across multiple files or tables.
+
+c. Sort Data:
+Sorting arranges data in ascending or descending order based on one or more columns. It helps in ranking or identifying top/bottom values.
+
+d. Transposing Data:
+Transposing flips rows into columns and columns into rows. This is helpful when we want to view data from a different angle.
+
+e. Shape and Reshape Data:
+The shape tells the number of rows and columns. Reshaping means changing the structure of data (like converting rows to columns or vice versa) using pivot, melt, etc.
+
+🐍 Python Libraries Used (With Simple Explanation)
+pandas
+
+Main library used for all data operations.
+
+Helps in reading, manipulating, and analyzing data easily.
+
+📌 Key functions:
+
+read_csv(): Load CSV file
+
+df[['col1', 'col2']]: Subset columns
+
+pd.merge(): Merge datasets
+
+df.sort_values(): Sort data
+
+df.T: Transpose data
+
+df.shape: Check shape (rows, columns)
+
+df.melt(), df.pivot(): Reshape data

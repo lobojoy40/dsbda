@@ -1,0 +1,52 @@
+🔹 Theory for B4 (Write This in Exam)
+Data Visualization:
+It is the process of displaying data in graphical format like bar charts, line graphs, histograms, etc., to easily understand patterns, trends, and insights.
+
+Using graphs helps in better understanding of complex data and is essential in data analysis and decision-making.
+
+For Assignment 2 (Air Quality & Heart Disease) and Assignment 3 (Facebook Metrics), we can use graphs like:
+
+Histogram: To see distribution of values (e.g., age, air pollution levels)
+
+Bar Chart: To compare values (e.g., number of likes on different post types)
+
+Line Plot: To see trends over time (e.g., pollution levels across days)
+
+Box Plot: To detect outliers and understand data spread
+
+Heatmap: To show correlation between features
+
+🐍 Python Libraries Used (Simple Explanation)
+matplotlib.pyplot
+
+Used for creating basic plots and charts.
+
+Functions:
+
+plot(): Line graph
+
+bar(): Bar chart
+
+hist(): Histogram
+
+scatter(): Scatter plot
+
+show(): Display the plot
+
+seaborn
+
+Built on top of matplotlib with better visual styles and easier syntax.
+
+Functions:
+
+sns.barplot(): Bar chart
+
+sns.histplot(): Histogram
+
+sns.boxplot(): Box plot
+
+sns.heatmap(): Correlation heatmap
+
+sns.lineplot(): Line chart
+
+Both libraries help make data understandable through visuals.

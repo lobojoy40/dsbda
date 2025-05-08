@@ -1,0 +1,128 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+%matplotlib inline
+
+import warnings
+warnings.filterwarnings("ignore")
+# Load the dataset
+zomato = pd.read_csv('Zomato data .csv')
+zomato.shape
+
+zomato.head(5)
+
+# Rename columns for easier access
+zomato.rename(columns={'approx_cost(for two people)': 'cost',
+                          'listed_in(type)': 'type',
+                          'listed_in(city)': 'city'}, inplace=True)
+# checking for null values
+zomato.isnull().sum()
+
+# Checking some values
+zomato['rate'].sample(10)
+
+# Replace 'NEW' and '-' with NaN
+zomato['rate'] = zomato['rate'].replace({'NEW': np.nan, '-': np.nan})
+
+# Drop rows with NaN values
+zomato.dropna(how='any', inplace=True)
+# checking shape
+zomato.shape
+
+# checking some values of 'cost'
+zomato['cost'].sample(10)
+
+# Remove '/5' from ratings and convert to float
+zomato['rate'] = zomato['rate'].apply(lambda x: str(x).split('/')[0])
+zomato['rate'] = zomato['rate'].astype(float)
+
+# Remove commas from cost and convert to float
+zomato['cost'] = zomato['cost'].apply(lambda x: str(x).replace(',', ''))
+zomato['cost'] = zomato['cost'].astype(float)
+
+# now everything is fine
+zomato['cost'].sample(5)
+
+# checking for duplicated rows
+
+zomato.duplicated().sum()
+
+# Drop duplicate rows
+zomato.drop_duplicates(inplace=True)
+
+zomato.duplicated().sum()
+
+plt.figure(figsize=(8, 6))
+sns.histplot(zomato['rate'], bins=20, kde=True , color='red')
+plt.title('Distribution of Restaurant Ratings')
+plt.xlabel('Rating')
+plt.ylabel('Frequency')
+plt.show()
+
+plt.figure(figsize=(8, 6))
+sns.boxplot(x='online_order', y='rate', data=zomato)
+plt.title('Online Orders vs. Ratings')
+plt.xlabel('Online Order')
+plt.ylabel('Rating')
+plt.show()
+
+plt.figure(figsize=(8, 6))
+sns.boxplot(x='book_table', y='rate', data=zomato)
+plt.title('Table Booking vs. Ratings')
+plt.xlabel('Table Booking')
+plt.ylabel('Rating')
+plt.show()
+
+plt.figure(figsize=(8, 8))
+zomato['online_order'].value_counts().plot.pie(autopct='%1.1f%%', colors=['skyblue', 'orange'])
+plt.title('Online Order Availability')
+plt.ylabel('')
+plt.show()
+
+# top 15 restaurant chains with the most outlets
+top_chains = zomato['name'].value_counts().nlargest(15)
+
+plt.figure(figsize=(12, 6))
+sns.barplot(y=top_chains.index, x=top_chains.values, palette="magma")
+
+
+plt.title("Top 15 Restaurant Chains in Bangalore", fontsize=14, fontweight="bold")
+plt.xlabel("Number of Outlets")
+plt.ylabel("Restaurant Chain")
+
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

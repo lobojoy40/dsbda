@@ -1,0 +1,71 @@
+Predictive models use machine learning algorithms to predict outcomes based on past data. The process involves:
+
+Data Collection
+
+Data Preprocessing
+
+Feature Selection
+
+Model Training
+
+Model Evaluation
+
+Prediction
+
+✅ Mini Project 1: Car Price Prediction
+🔹 Problem Statement:
+Predict the price of a used car based on features like age, fuel type, transmission, kilometers driven, etc.
+
+🔹 Techniques Used:
+Linear Regression – For simple price prediction
+
+Random Forest Regressor – For better accuracy using ensemble trees
+
+XGBoost Regressor – Advanced boosting for high performance
+
+🔹 Evaluation Metrics:
+R² Score: Measures how well the model explains the data
+
+Mean Absolute Error (MAE)
+
+Root Mean Squared Error (RMSE)
+
+✅ Mini Project 2: Zomato Restaurant Rating Prediction
+🔹 Problem Statement:
+Predict the ratings of restaurants based on features like votes, cost, location, cuisines, and service types.
+
+🔹 Techniques Used:
+Decision Tree Classifier – Classify ratings into 1–5 stars
+
+Logistic Regression – For binary/multiclass rating predictions
+
+Support Vector Machine (SVM) – For improved classification
+
+🔹 Evaluation Metrics:
+Accuracy
+
+Confusion Matrix
+
+Precision / Recall / F1 Score
+
+🐍 Python Libraries Used (Simple Explanation)
+Library	Purpose
+pandas	Load and process data
+numpy	Numerical operations
+matplotlib / seaborn	Visualization
+scikit-learn (sklearn)	Building and evaluating models
+xgboost	Boosting model for better accuracy
+LabelEncoder, OneHotEncoder	Encoding categorical features
+
+📊 Common Steps in Both Projects:
+Load dataset using pandas
+
+Clean and preprocess data (handle nulls, encode categorical variables)
+
+Split data into training and testing sets
+
+Train model using fit() method
+
+Predict using predict()
+
+Evaluate using metrics like accuracy or RMSE

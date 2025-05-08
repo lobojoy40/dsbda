@@ -1,0 +1,41 @@
+🔹 Theory for B2 (Write This in Exam)
+a. Data Cleaning:
+Removing or correcting missing, duplicate, or incorrect data to improve data quality. Helps in accurate analysis.
+
+b. Data Integration:
+Combining data from multiple sources (e.g., air quality + heart disease datasets) into one dataset for better analysis and insights.
+
+c. Data Transformation:
+Converting data into suitable format or scale (e.g., normalizing values, encoding categories) to make it usable for machine learning models.
+
+d. Error Correcting:
+Fixing inconsistencies or incorrect values, like replacing out-of-range values or correcting typos in categorical data.
+
+e. Data Model Building:
+Creating a machine learning model (e.g., logistic regression, decision tree) using the cleaned and transformed data to predict outcomes (like disease risk).
+
+🐍 Python Libraries Used (Simple Explanation)
+pandas
+
+Used for data loading, cleaning, merging, and transformation.
+
+Common functions: dropna(), fillna(), merge(), replace(), apply(), astype()
+
+numpy
+
+Helps with numerical operations and handling missing values.
+
+scikit-learn (sklearn)
+
+Used for building and evaluating machine learning models.
+
+Key functions:
+
+train_test_split(): Split data for training/testing
+
+StandardScaler(): Normalize data
+
+LogisticRegression(), DecisionTreeClassifier(): Build models
+
+accuracy_score(): Evaluate model
+
